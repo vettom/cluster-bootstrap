@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: core
+  annotations:
+    argocd.argoproj.io/sync-wave: "-3"
+spec:
+  description: Project for Argo Applications
+  destinations:
+  - namespace: "*"
+    server: https://kubernetes.default.svc
+  sourceRepos:
+  - https://gitlab.com/gomedia/plateng/kubernetes-infra.git
+  - https://nexus.int.gomedia.io/repository/helm
+  - https://gitlab.com/gomedia/plateng/gke-core-apps.git
+  - https://kubernetes.github.io/ingress-nginx
+  - https://charts.external-secrets.io
+  - https://charts.jetstack.io
+  - https://charts.bitnami.com/bitnami
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'

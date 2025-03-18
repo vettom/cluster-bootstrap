@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 00-argoapp-bootstrap
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-options: Prune=true
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+    - repoURL: https://github.com/vettom/cluster-bootstrap
+      targetRevision: HEAD
+      path: .
+      directory:
+        recurse: true
+  syncPolicy:
+    automated: {}

@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   sources:
-    - repoURL: https://github.com/vettom/cluster-bootstrap
+    - repoURL: https://github.com/vettom/cluster-bootstrap.git
       targetRevision: HEAD
       path: .
       directory:

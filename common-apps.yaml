@@ -17,9 +17,5 @@ spec:
     - repoURL: https://github.com/vettom/ArgoCD.git
       targetRevision: HEAD
       path: .
-      directory:
-        recurse: true
       helm:
         values: |
-          argocd:
-            version: 7.8.4

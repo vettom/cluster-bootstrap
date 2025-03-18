@@ -28,4 +28,3 @@ spec:
             version: 14.0.0
           prometheus_blackbox:
             version: 9.3.0
-            # targets: []

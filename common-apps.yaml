@@ -17,3 +17,14 @@ spec:
     - repoURL: https://github.com/vettom/ArgoCD.git
       targetRevision: HEAD
       path: .
+      helm:
+        values: |
+          argocd:
+            version: 7.8.4
+          prometheus_stack:
+            enabled: false
+            version: 
+          prometheus_crds:
+            version: 14.0.0
+          prometheus_blackbox:
+            version:

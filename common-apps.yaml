@@ -14,8 +14,8 @@ spec:
     syncOptions:
       - CreateNamespace=false
   source:
-    - repoURL: https://github.com/vettom/ArgoCD.git
-      targetRevision: HEAD
-      path: .
-      helm:
-        values: |
+  - repoURL: https://github.com/vettom/ArgoCD.git
+    targetRevision: HEAD
+    path: .
+    helm:
+      values: |
